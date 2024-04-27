@@ -19,3 +19,6 @@ if contour_interval == '#' or not contour_interval:
     contour_interval = '25'
 if float(contour_interval) <= 0:
     raise Exception('height value is not suitable for contour construction')
+arcpy.AddMessage("parameters are checked")
+arcpy.sa.Contour(inraster, outcontur, 25, 0)
+arcpy.AddMessage("contur polylines are built")
