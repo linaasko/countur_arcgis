@@ -17,3 +17,5 @@ if outcontur == '#' or not outcontur:
 contour_interval = arcpy.GetParameterAsText(2)
 if contour_interval == '#' or not contour_interval:
     contour_interval = '25'
+if float(contour_interval) <= 0:
+    raise Exception('height value is not suitable for contour construction')
